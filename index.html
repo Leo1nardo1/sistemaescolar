@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Escolar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <script src="js/code.jquery.com_jquery-3.7.0.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Cinzel+Decorative:wght@700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="scroll-down" id="scroll">
+    <div class="fade-in">
+      <p class="paragraph">Sistema Escolar</p>
+      <p class="go-down">Role Para Baixo</p>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <path
+          d="M16 3C8.832031 3 3 8.832031 3 16s5.832031 13 13 13 13-5.832031 13-13S23.167969 3 16 3zm0 2c6.085938 0 11 4.914063 11 11 0 6.085938-4.914062 11-11 11-6.085937 0-11-4.914062-11-11C5 9.914063 9.914063 5 16 5zm-1 4v10.28125l-4-4-1.40625 1.4375L16 23.125l6.40625-6.40625L21 15.28125l-4 4V9z" />
+      </svg>
+
+    </div>
+
+</div>
+  
+
+
+
+  <div class="container"></div>
+  <div class="modal">
+    <div class="modal-container">
+      <div class="modal-left">
+        <h1 class="modal-title">BEM VINDO!</h1>
+        <p class="modal-desc">Aqui calcularemos a sua média.</p>
+
+        <div class="each-input">
+          <div class="input-block">
+            <label class="input-label">Nome</label>
+              <input type="text" id="nome" placeholder="Digite o seu nome">
+
+          </div>
+  
+        </div>
+
+        <div class="each-input">
+          <div class="input-block">
+
+            <label for="email" class="input-label">1ª Unidade</label>
+            <div class="input-field">
+              <input type="number" name="email" id="nota1" placeholder="Nota">
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="each-input">
+          <div class="input-block">
+
+            <label for="password" class="input-label">2ª Unidade</label>
+            <div class="input-field">
+              <input type="number" name="password" id="nota2" placeholder="Nota">
+              
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="each-input">
+          <div class="input-block">
+
+            <label for="password" class="input-label">3ª Unidade</label>
+          
+              <input type="number" name="nota3" id="nota3" placeholder="Nota">
+          </div>
+          
+        </div>
+
+        <div class="input-container">
+          <div class="modal-buttons">
+
+            <label class="modal-openup modal-label" for="modal-openup" onclick="calculoMedia()">
+              <p>Calcular</p>
+            </label>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="modal-right">
+        <img
+          src="https://www.wwlp.com/wp-content/uploads/sites/26/2023/08/tax-free-weekends-back-to-school-shopping-1.jpg"
+          alt="">
+
+      </div>
+
+
+
+      <div class="content">
+
+        <input type="radio" name="modal" value="open" id="modal-openup" class="modal-radio" />
+        <div class="custom-modal">
+          <label class="modal-lbl overlay">
+            <input type="radio" name="modal" value="close" class="modal-radio" onclick="closeSecondModal()" />
+          </label>
+          <div class="content">
+            <div class="top">
+              <div class="center">
+                <h2 id="resultado"></h2>
+                <label class="modal-label close-btn" onclick="closeSecondModal()">
+                  <input type="radio" name="modal" value="close" class="modal-radio" />
+                </label>
+              </div>
+
+              <p id="situacao"></p>
+              
+            </div>
+            <div class="gallery" id="galleryA">
+                <img src="https://media.tenor.com/E9V21wwyeHsAAAAd/leonardo-dicaprio-leo-dicaprio.gif" alt="a hot air balloon">
+                <img src="https://media.tenor.com/0sc3Bm1CPjAAAAAd/beyposudu-uraaa.gif" alt="a sky photo of an old city">
+                <img src="https://media.tenor.com/6FA7eX2JskwAAAAM/celebration-gastby.gif" alt="a small boat">
+                <img src="https://usagif.com/wp-content/uploads/funny-celebrate-15.gif" alt="a forest">
+              </div> 
+            <div class="gallery" id="galleryB">
+                <img src="https://media.wired.com/photos/5f87340d114b38fa1f8339f9/master/w_1600%2Cc_limit/Ideas_Surprised_Pikachu_HD.jpg" alt="a hot air balloon">
+                <img src="https://media.tenor.com/ssuQ2A1wcIcAAAAd/shocked-surprised.gif" alt="a sky photo of an old city">
+                <img src="https://media.tenor.com/WI5loYBJYFwAAAAM/what-surprised.gif" alt="a small boat">
+                <img src="https://media.tenor.com/thKAX0NA2BcAAAAM/done-fed.gif" alt="a forest">
+              </div> 
+            <div class="gallery" id="galleryC">
+                <img src="https://media.tenor.com/anD0PqbhsCsAAAAC/faz-o-l-lula.gif" alt="a hot air balloon">
+                <img src="https://media.tenor.com/4F6LXZy2_4kAAAAd/vegeta-under-the-rain.gif" alt="a sky photo of an old city">
+                <img src="https://media.tenor.com/sYqgrJwaPjIAAAAM/fluminense-rebaixado.gif" alt="a small boat">
+                <img src="https://media.tenor.com/wMDO2ceyGOYAAAAd/dog-sad.gif" alt="a forest">
+              </div> 
+        
+          </div>
+        </div>
+      </div>
+      <button class="icon-button close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path
+            d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+
+    <!-- <div class="modal-box">
+
+        <div class="second-modal">
+          <h2 id="situacao"></h2>
+          <hr />
+          <span id="resultado">
+
+          </span>
+          <hr />
+          <div class="btns">
+            <button class="btnOK" onclick="closeSecondModal()">OK</button>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <button class="modal-button">
+        <span class="span">Calcular Média</span>
+        <span class="second">
+          <svg width="50px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+              <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+            </g>
+          </svg>
+        </span> 
+    </button>
+  </div>
+
+
+
+
+
+  </div>
+
+
+
+
+
+  <script src="js/javascript.js"></script>
+
+</body>
+
+</html>
